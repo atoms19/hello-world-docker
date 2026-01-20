@@ -88,6 +88,37 @@ all you needed was docker installed on your machine
 
 
 
+## cleaning up
+after you are done with running the docker container you can clean up by stopping and removing the docker container and image
 
+### stopping the docker container
 
+you can see the list of running docker containers by running the following command
+```bash
+docker ps
+```
+this will list all the running docker containers on your machine
 
+to stop a running docker container you can run the following command
+```bash
+docker stop <container_id>
+```
+
+container_id is automatically generated when you run a docker container
+you can get the container_id from the output of the docker ps command
+for example if the container_id is abc123 you can stop the container by running the following command
+```bash
+docker stop abc123
+```
+
+### removing the docker container
+after stopping the docker container you can remove it by running the following command
+```bash
+docker rm <container_id>
+```
+
+### removing the docker image
+after removing the docker container you can remove the docker image by running the following command
+```bash
+docker rmi hello-world-docker
+```
